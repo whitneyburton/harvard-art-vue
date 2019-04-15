@@ -1,4 +1,4 @@
-# Harvard Art Final
+# Harvard Art View in Vue
 
 ## Project setup
 ```
