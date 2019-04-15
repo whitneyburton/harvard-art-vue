@@ -1,4 +1,4 @@
-# take-home-final
+# Harvard Art Final
 
 ## Project setup
 ```
