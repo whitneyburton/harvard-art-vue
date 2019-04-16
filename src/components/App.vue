@@ -1,22 +1,22 @@
 <template>
   <div id="app">
     <h1 v-once>Harvard Art Museums</h1>
-    <h3
+    <p
       v-once
-    >Welcome! Here you can find the art produced by different cultures around the world showcased by Harvard Art Museums.</h3>
+    >Welcome! Here you can find the art produced by different cultures around the world showcased by Harvard Art Museums.</p>
     <button v-on:click="fetchArt()">Uruguayan</button>
     <button v-on:click="fetchArt()">Turkmen</button>
     <button v-on:click="fetchArt()">Swedish</button>
     <button v-on:click="fetchArt()">Bulgarian</button>
     <button v-on:click="fetchArt()">Bohemian</button>
     <hr></hr>
-    <h4 v-if="currentCulture">Current Culture: {{ currentCulture }}</h4>
+    <p v-if="currentCulture">Current Culture: {{ currentCulture }}</p>
     <ul v-if="currentCulture" class="art-list">
       <li class="art-item" v-for="art in artwork" v-bind:key="art.id">
         <img v-bind:src="`${art.primaryimageurl}`" class="artPiece">
       </li>
     </ul>
-    <h4 v-if="!currentCulture">Choose a culture above to get started!</h4>
+    <p v-if="!currentCulture">Choose a culture above to get started!</p>
   </div>
 </template>
 
@@ -61,12 +61,13 @@ export default {
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Merriweather", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 20px;
+  font-weight: 300;
 }
 
 ul {
@@ -80,5 +81,20 @@ li {
 
 img {
   width: 80%;
+}
+
+button {
+  width: 18%;
+  height: 30px;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  margin: 0px 2px;
+  cursor: pointer;
+  outline: none;
 }
 </style>
