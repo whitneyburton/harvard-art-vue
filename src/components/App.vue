@@ -2,8 +2,6 @@
   <div id="app">
     <h1 v-once>Harvard Art Museums</h1>
     <h3>Welcome! Here you can find the artists, sitters, printers, donors, authors, and publishers of Harvard Art Museums.</h3>
-    <button v-on:click="created">List Artists</button>
-    <p v-if="seen">{{ ok ? 'YES' : 'NO' }}!</p>
   </div>
 </template>
 
