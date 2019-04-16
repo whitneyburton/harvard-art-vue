@@ -1,7 +1,7 @@
 <template>
   <div class="ArtContainer">
     <ul v-if="currentCulture" class="art-list">
-      <li class="art-item" v-for="art in artwork" v-bind:key="art.id">
+      <li class="art-item" v-for="art in artwork[currentCulture]" v-bind:key="art.id">
         <h2 class="art-title">{{art.title}}</h2>
         <div class="art-info">
           <div class="creation-info">
@@ -28,7 +28,7 @@
 export default {
   name: 'ArtContainer',
   props: {
-    artwork: Array,
+    artwork: Object,
     currentCulture: String
   }
 }
