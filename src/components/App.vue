@@ -9,8 +9,8 @@
     <button v-on:click="fetchArt()">Swedish</button>
     <button v-on:click="fetchArt()">Bulgarian</button>
     <button v-on:click="fetchArt()">Bohemian</button>
-    <hr></hr>
     <p class="current-culture" v-if="currentCulture">Current Culture: {{ currentCulture }}</p>
+    <hr></hr>
     <ul v-if="currentCulture" class="art-list">
       <li class="art-item" v-for="art in artwork" v-bind:key="art.id">
         <h2 class="art-title">{{art.title}}</h2>
@@ -30,7 +30,6 @@
           </div>
         </div>
           <img class="art-image" v-bind:src="`${art.primaryimageurl}`">
-
       </li>
     </ul>
     <p v-if="!currentCulture">Choose a culture above to get started!</p>
@@ -39,11 +38,11 @@
 
 <script>
 import { apiKey } from "../../api_key.js";
-
+import ArtContainer from "./ArtContainer.vue";
 
 export default {
   name: "app",
-  components: {},
+  components: { ArtContainer },
   data() {
     return {
       error: "",
@@ -77,7 +76,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: "Nanum Myeongjo", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -156,5 +155,9 @@ a {
 
 h4 {
   margin: 5px;
+}
+
+hr {
+  margin: 0px 0px 30px 0px;
 }
 </style>

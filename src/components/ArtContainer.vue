@@ -1,5 +1,6 @@
 <template>
   <div class="ArtContainer">
+    
   </div>
 </template>
 
