@@ -1,23 +1,30 @@
 <template>
   <div id="app">
-    <!-- <HelloWorld msg="Harvard Art Lens"/> -->
-    <h1>Harvard Art Museums</h1>
+    <h1 v-once>Harvard Art Museums</h1>
     <h3>Welcome! Here you can find the artists, sitters, printers, donors, authors, and publishers of Harvard Art Museums.</h3>
-    <p v-if="seen">Testing!</p>
+    <button v-on:click="created">List Artists</button>
+    <p v-if="seen">{{ ok ? 'YES' : 'NO' }}!</p>
   </div>
 </template>
 
 <script>
-import fetchData from "../utils/api.js";
+import { apiKey } from "../../api_key.js";
 
 export default {
   name: "app",
   components: {},
   data() {
     return {
-      artists: [],
-      seen: true
+      art: [],
+      error: ""
     };
+  },
+  mounted() {
+    const url = `https://api.harvardartmuseums.org/object?apikey=${apiKey}&culture=37527759`;
+    fetch(url)
+      .then(response => response.json())
+      .then(result => (this.art = [...this.art, result.records]))
+      .catch(error => (this.error = error.message));
   }
 };
 </script>
@@ -30,6 +37,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-color: turquoise;
 }
 </style>
