@@ -1,5 +1,4 @@
 # Harvard Art Museums Culture Tour
----
 This single-page web application allows users to browse a variety of art forms from a variety of cultures from around the world. The cultures include Uruguayan, Turkmen, Swedish, Bulgarian, and Bohemian. As users select the culture of their choice, they can see samples of art from Harvard Art Museums (data pulled from their API, [found here](https://www.harvardartmuseums.org/collections/api)).
 
 ### Project setup
@@ -15,8 +14,7 @@ This single-page web application allows users to browse a variety of art forms f
 9. Visit `localhost:8080` in your browser of choice.
 
 ### Tech Stack
-Vue.js
-CSS
+Vue.js, CSS
 
 ### Preview
 ![2019-04-16 15 23 34](https://user-images.githubusercontent.com/33883645/56245061-abac5880-605b-11e9-9242-c90a61fab993.gif)
