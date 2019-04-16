@@ -26,7 +26,13 @@ export default {
   data() {
     return {
       error: "",
-      artwork: [],
+      artwork: {
+        Uruguayan: [],
+        Turkmen: [],
+        Swedish: [],
+        Bulgarian: [],
+        Bohemian: [] 
+      },
       cultureIDs: {
         Uruguayan: 37528893,
         Turkmen: 37528812,
@@ -43,14 +49,19 @@ export default {
       const url = `https://api.harvardartmuseums.org/object?apikey=${apiKey}&culture=${
         this.cultureIDs[clickedCulture]
       }`;
-      fetch(url)
-        .then(response => response.json())
-        .then(result =>
-          result.records.filter(record => record.imagecount > 0 && record.primaryimageurl !== null)
-        )
-        .then(records => (this.artwork = records))
-        .then(records => (this.currentCulture = clickedCulture))
-        .catch(error => (this.error = error.message));
+
+      if (!this.artwork[clickedCulture].length) {
+        fetch(url)
+          .then(response => response.json())
+          .then(result =>
+            result.records.filter(record => record.imagecount > 0 && record.primaryimageurl !== null)
+          )
+          .then(records => (this.artwork[clickedCulture] = records))
+          .then(() => (this.currentCulture = clickedCulture))
+          .catch(error => (this.error = error.message));
+      } else {
+        this.currentCulture = clickedCulture;
+      }
     }
   }
 };
@@ -89,5 +100,4 @@ button {
   cursor: pointer;
   outline: none;
 }
-
 </style>
