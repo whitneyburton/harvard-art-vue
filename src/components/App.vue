@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <h1>Harvard Art Museums</h1>
+    <h1>Art Culture Tour</h1>
     <hr/>
-    <p>Welcome!</p> 
-    <p>Discover art produced by different cultures around the world showcased by Harvard Art Museums.</p>
+    <p>Welcome! Discover art produced by different cultures around the world.</p>
     <button v-on:click="fetchArt()">Uruguayan</button>
     <button v-on:click="fetchArt()">Turkmen</button>
     <button v-on:click="fetchArt()">Swedish</button>
@@ -12,7 +11,7 @@
     <p class="current-culture" v-if="currentCulture">Current Culture: {{ currentCulture }}</p>
     <hr/>
     <ArtContainer :key="currentCulture" :artwork="artwork" :currentCulture="currentCulture" />
-    <p v-if="!currentCulture">Choose a culture above to get started!</p>
+    <p v-if="!currentCulture">Choose a culture above to get started.</p>
   </div>
 </template>
 

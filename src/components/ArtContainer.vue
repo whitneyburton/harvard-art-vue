@@ -6,15 +6,30 @@
         <div class="art-info">
           <div class="creation-info">
             <h4>CREATION</h4>
-            <p>Classification: {{art.classification}}</p>
-            <p>Dated: {{art.dated}}</p>
-            <p>Division: {{art.division}}</p>
+            <p>
+              <span>Classification</span>
+              : {{art.classification}}
+            </p>
+            <p>
+              <span>Dated</span>
+              : {{art.dated}}
+            </p>
+            <p>
+              <span>Division</span>
+              : {{art.division}}
+            </p>
           </div>
           <div class="physical-info">
             <h4>PHYSICAL DESCRIPTIONS</h4>
-            <p>Medium: {{art.medium}}</p>
-            <p>Dimensions: {{art.dimensions}}</p>
-            <a v-bind:href=art.url target="_blank">View More</a>
+            <p>
+              <span>Medium</span>
+              : {{art.medium}}
+            </p>
+            <p>
+              <span>Dimensions</span>
+              : {{art.dimensions}}
+            </p>
+            <a v-bind:href="art.url" target="_blank">View More</a>
           </div>
         </div>
         <div class="image-and-credits">
@@ -28,12 +43,12 @@
 
 <script>
 export default {
-  name: 'ArtContainer',
+  name: "ArtContainer",
   props: {
     artwork: Object,
     currentCulture: String
   }
-}
+};
 </script>
 
 <style scoped>
@@ -51,7 +66,7 @@ export default {
   display: flex;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 80%;
+  width: 90%;
   margin: auto;
   background-color: #f5f5f5;
 }
@@ -68,20 +83,22 @@ export default {
   text-decoration: underline;
   background-color: #f5f5f5;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   border-radius: 10px 10px 0px 0px;
   padding: 15px 0px;
   letter-spacing: 2px;
 }
 
 .art-image {
-  max-width: 80%;
+  max-width: 90%;
   max-height: 500px;
 }
 
 p,
 a {
   font-size: 14px;
+  max-height: 35px;
+  overflow: scroll;
 }
 
 h4 {
@@ -89,17 +106,20 @@ h4 {
   font-family: Arial;
 }
 
+span {
+  font-weight: bold;
+}
+
 .image-and-credits {
   background-color: #f5f5f5;
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
 .credit-line {
   margin: 0px auto 50px auto;
   background-color: #f5f5f5;
-  width: 80%;
+  width: 90%;
   padding: 10px 0px;
 }
-
 </style>
