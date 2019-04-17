@@ -17,8 +17,10 @@
             <a v-bind:href=art.url target="_blank">View More</a>
           </div>
         </div>
+        <div class="image-and-credits">
           <img class="art-image" v-bind:src="`${art.primaryimageurl}`">
           <p class="credit-line">{{ art.creditline }}</p>
+        </div>
       </li>
     </ul>
   </div>
@@ -36,7 +38,7 @@ export default {
 
 <style scoped>
 .art-list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -47,12 +49,11 @@ export default {
 
 .art-info {
   display: flex;
-  border: 1px solid whitesmoke;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 70%;
+  width: 80%;
   margin: auto;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 
 .creation-info {
@@ -65,16 +66,17 @@ export default {
 
 .art-title {
   text-decoration: underline;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
   border-radius: 10px 10px 0px 0px;
   padding: 15px 0px;
   letter-spacing: 2px;
 }
 
 .art-image {
-  width: 70%;
+  max-width: 80%;
+  max-height: 500px;
 }
 
 p,
@@ -87,10 +89,16 @@ h4 {
   font-family: Arial;
 }
 
+.image-and-credits {
+  background-color: #f5f5f5;
+  width: 80%;
+  margin: auto;
+}
+
 .credit-line {
   margin: 0px auto 50px auto;
-  background-color: whitesmoke;
-  width: 70%;
+  background-color: #f5f5f5;
+  width: 80%;
   padding: 10px 0px;
 }
 
