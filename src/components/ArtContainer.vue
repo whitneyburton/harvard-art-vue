@@ -66,7 +66,7 @@ export default {
   display: flex;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 90%;
+  width: 80%;
   margin: auto;
   background-color: #f5f5f5;
 }
@@ -83,14 +83,14 @@ export default {
   text-decoration: underline;
   background-color: #f5f5f5;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
   border-radius: 10px 10px 0px 0px;
   padding: 15px 0px;
   letter-spacing: 2px;
 }
 
 .art-image {
-  max-width: 90%;
+  max-width: 80%;
   max-height: 500px;
 }
 
@@ -112,14 +112,14 @@ span {
 
 .image-and-credits {
   background-color: #f5f5f5;
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 
 .credit-line {
   margin: 0px auto 50px auto;
   background-color: #f5f5f5;
-  width: 90%;
+  width: 80%;
   padding: 10px 0px;
 }
 </style>
