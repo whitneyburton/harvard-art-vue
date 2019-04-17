@@ -1,39 +1,39 @@
 <template>
   <div class="ArtContainer">
     <ul v-if="currentCulture" class="art-list">
-      <li class="art-item" v-for="art in artwork[currentCulture]" v-bind:key="art.id">
+      <li class="art-item" v-for="art in artwork[currentCulture]" :key="art.id">
         <h2 class="art-title">{{art.title}}</h2>
         <div class="art-info">
           <div class="creation-info">
             <h4>CREATION</h4>
             <p>
-              <span>Classification</span>
-              : {{art.classification}}
+              <span>Classification:</span>
+              {{art.classification}}
             </p>
             <p>
-              <span>Dated</span>
-              : {{art.dated}}
+              <span>Dated:</span>
+              {{art.dated}}
             </p>
             <p>
-              <span>Division</span>
-              : {{art.division}}
+              <span>Division:</span>
+              {{art.division}}
             </p>
           </div>
           <div class="physical-info">
             <h4>PHYSICAL DESCRIPTIONS</h4>
             <p>
-              <span>Medium</span>
-              : {{art.medium}}
+              <span>Medium:</span>
+              {{art.medium}}
             </p>
             <p>
-              <span>Dimensions</span>
-              : {{art.dimensions}}
+              <span>Dimensions:</span>
+              {{art.dimensions}}
             </p>
-            <a v-bind:href="art.url" target="_blank">View More</a>
+            <a :href="art.url" target="_blank">View More</a>
           </div>
         </div>
         <div class="image-and-credits">
-          <img class="art-image" v-bind:src="`${art.primaryimageurl}`">
+          <img class="art-image" :src="`${art.primaryimageurl}`">
           <p class="credit-line">{{ art.creditline }}</p>
         </div>
       </li>

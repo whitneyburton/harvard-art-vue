@@ -3,11 +3,11 @@
     <h1>Art Culture Tour</h1>
     <hr/>
     <p>Welcome! Discover art produced by different cultures around the world.</p>
-    <button v-on:click="fetchArt()">Uruguayan</button>
-    <button v-on:click="fetchArt()">Turkmen</button>
-    <button v-on:click="fetchArt()">Swedish</button>
-    <button v-on:click="fetchArt()">Bulgarian</button>
-    <button v-on:click="fetchArt()">Bohemian</button>
+    <button @click="fetchArt()">Uruguayan</button>
+    <button @click="fetchArt()">Turkmen</button>
+    <button @click="fetchArt()">Swedish</button>
+    <button @click="fetchArt()">Bulgarian</button>
+    <button @click="fetchArt()">Bohemian</button>
     <p class="current-culture" v-if="currentCulture">Current Culture: {{ currentCulture }}</p>
     <hr/>
     <ArtContainer :key="currentCulture" :artwork="artwork" :currentCulture="currentCulture" />
