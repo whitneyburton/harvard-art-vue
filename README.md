@@ -17,7 +17,7 @@ This single-page web application allows users to browse a variety of art forms f
 Vue.js, CSS
 
 ### Preview
-![2019-04-16 15 23 34](https://user-images.githubusercontent.com/33883645/56245061-abac5880-605b-11e9-9242-c90a61fab993.gif)
+![2019-04-17 11 24 53](https://user-images.githubusercontent.com/33883645/56308048-912dba00-6103-11e9-98a6-cd5338b7afa5.gif)
 
 This project, The Final Countdown, was an assignment by Turing School of Software and Design. The spec can be found [HERE](http://frontend.turing.io/projects/final-countdown.html), and the specific prompt for the Harvard Art Museums challenge can be found [HERE](https://gist.github.com/letakeane/16882c0604830c5482b25431a6a6cb19).
 
